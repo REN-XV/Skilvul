@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+    }
 :root{
     --primary-color: #fead53;
     --text-dark: #333333;
@@ -23,14 +26,122 @@ input::placeholder{
     color: var(--extra-light);
 }
 
+/* Background umum dengan gradien */
 body {
-    font-family: "Open Sans", sans-serif;
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-                      url('aset/thumb-1920-692433.jpg');
-    background-position: center center;
-    /* background-size: cover; */
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #2E8B57, #4fb327); /* Hijau alami dan hijau gelap */
+    color: #f0f0f0; /* Warna teks terang agar kontras */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+main {
+    background-image: url('aset/Desain tanpa judul.png');
+}
+
+/* Update pada bagian header */
+header {
+    background-color: #2E8B57; /* Hijau alami */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Bagian section */
+section {
+    padding: 50px;
+    background-color: #F5F5F5; /* Warna background untuk teks agar tetap terang */
+    color: #333; /* Warna teks gelap untuk kontras */
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1000px;
+}
+
+/* Teks heading dalam section */
+section h2 {
+    font-size: 2.5em;
+}
+
+/* Update footer */
+footer {
+    background-color: #2E8B57;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Update link */
+a {
+    color: #FFD700; /* Warna emas untuk link */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FF8C00; /* Warna oranye untuk hover */
+}
+
+/* Responsif untuk mobile */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    header {
+        font-size: 1.5em;
+    }
+}
+
+
+#features {
+    padding: 50px;
+    background-color: rgb(229, 231, 229); /* Tidak ada background untuk section Features */
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.feature {
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih transparan untuk konten fitur */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.feature button {
+    padding: 10px 20px;
+    background-color: #fead53;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feature button:hover {
+    background-color: #e59442;
 }
 
 
@@ -40,18 +151,24 @@ nav{
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: var(--max-width);
     padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+    color: white;
+}
+
+a {
+    color: #fff             ;   
+
 }
 
 .nav__logo a{
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--extra-light);
+    margin-left: 20px;
 }
 
 .nav__links{
@@ -59,6 +176,7 @@ nav{
     display: flex;
     align-items: center;
     gap: 3rem;
+    margin-right: 50px;
 }
 
 .nav__links .link{
@@ -71,24 +189,6 @@ nav{
 
 .nav__links .link:hover{
     color: var(--primary-color);
-}
-
-.search__box{
-    padding: .5rem 0;
-    border-bottom: 2px solid var(--extra-light);
-}
-
-.search__box input{
-    color: var(--extra-light);
-    background-color: transparent;
-    outline: none;
-    border: none;
-}
-
-.search__box i{
-    color: var(--extra-light);
-    font-size: 1.2rem;
-    cursor: pointer;
 }
 
 main .container{
@@ -121,36 +221,11 @@ main .container{
     line-height: 4rem;
     color: var(--extra-light);
     font-weight: 700;
+    
 }
 
 .content p{
     color: var(--extra-light);
-}
-
-.btns{
-    display: flex;
-    gap: 1rem;
-}
-
-.btns button {
-    padding: .5rem 2rem;
-    color: var(--extra-light);
-    font-size: 1rem;
-    background-color: transparent;
-    outline: none;
-    border: 2px solid var(--extra-light);
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button.read__more{
-    background-color: var(--extra-light);
-    color: var(--text-dark);
-}
-
-button.our__blogs:hover{
-    background-color: var(--text-light);
 }
 
 .chevrons{
@@ -187,13 +262,13 @@ form {
     padding: 2rem;
     background-color: var(--text-light);
     border-radius: 8px;
-    color: var(--text-dark);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling tiap grup inputan */
-form input,
-form label {
+form #name, form #email,
+form #city, form #zip-code,
+ form label {
     display: block;
     width: 100%;
     margin-bottom: 1rem;
@@ -259,3 +334,167 @@ footer {
 footer p {
     margin: 0;
 }
+
+#impact {
+    padding: 50px;
+    background-color: #f3f4f6; /* Warna latar yang lebih terang */
+    text-align: center;
+}
+
+#impact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.impact__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.impact__item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+}
+
+.impact__item h3 {
+    font-size: 2rem;
+    color: green;
+    margin-bottom: 10px;
+}
+
+.impact__item p {
+    color: #555;
+    font-size: 1rem;
+}
+
+#latest-news {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+#latest-news h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.news__container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.news__item {
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 300px;
+}
+
+.news__item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.news__item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news__item p {
+    color: #555;
+    font-size: 1rem;
+}
+
+#testimonials {
+    padding: 50px;
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#gallery {
+    padding: 50px;
+    background-color: #f3f4f6;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#partners {
+    padding: 50px;
+    background-color: #f3f4f6;
+    text-align: center;
+}
+
+#partners h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partner-logos img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.partner-logos img:hover {
+    filter: none;
+}
+
