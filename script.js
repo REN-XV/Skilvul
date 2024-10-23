@@ -59,3 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // Menambahkan event listener untuk form submit
 document.getElementById('form').addEventListener('submit', submit);
 
+
+function showReforestation() {
+    alert("Reforestation map coming soon!");
+}
+
+function calculateCarbon() {
+    alert("Carbon footprint calculator is under development.");
+}
+
+function showForestMap() {
+    alert("Endangered forests map will be available soon!");
+}
